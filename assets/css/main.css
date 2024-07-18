@@ -1,0 +1,59 @@
+:root{
+    --navy: #1B1C57;
+}
+.t-navy{
+    color: #1B1C57;
+}
+.t-green{
+    color: #4BE4C9;
+}
+
+
+
+.b-green{ 
+    background-color: #4BE4C9;
+}
+
+.top-page::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #4BE4C9;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -30%);
+}
+
+.dropdown:hover p, .dropdown:hover i{
+    color: #A7F3D0;
+}
+
+
+.dropdown-content{
+    /* display: none; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* top: 0;
+    left: 0; */
+    top: 100%;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.hero-text{
+    color: navy;
+    /* text-transform: uppercase; */
+    font-size: 2.5rem;
+}
+
+.t-outline{
+    -webkit-text-stroke: 1px navy;
+    color: transparent;
+    font-size: 2.5rem;
+}
+
