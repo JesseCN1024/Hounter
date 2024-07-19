@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="./assets/css/main.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script>
         tailwind.config = {
           theme: {
@@ -23,23 +27,22 @@
         }
       </script>
 </head>
-<body class="bg-white">
+<body class="bg-white overflow-x-hidden md:overflow-x-hidden" style="width: 100vw;">
 
-
-    <div class="top-page relative container mx-auto px-20 py-6" style="height: 800px;">
+    <div class="top-page relative container mx-auto px-20 py-6">
         <!-- Header -->
-        <header class="bg-transparent z-20">
+        <header class="bg-transparent" style="z-index: 20;">
             <div class="flex container justify-between items-center">
                 <div class="text-2xl font-bold text-gray-900 flex space-x-2 items-center mr-auto">
                     <img src="./assets/images/logo.jpg" alt="">
                     <a href="#" class=" font-bold t-navy ms-0 text-base">Hounter</a>
                 </div>
-                <nav class="flex items-center ">
-                    <a href="#" class="mr-3 text-white hover:text-green-200 hover:border-green-200 border border-white rounded-3xl px-3 py-1.5 flex-row items-center font-medium">About Us</a>
-                    <a href="#" class="mr-3 text-white hover:text-green-200 hover:border-green-200 border border-white rounded-3xl px-3 py-1.5 flex-row items-center font-medium">Article</a>
-                    <a href="#" class="block mr-3 dropdown text-white relative hover:text-green-200 hover:border-green-200 border border-white rounded-3xl px-3 py-1.5 flex items-center font-medium space-x-2" style="position: relative;">
-                        <p class="text-white">Property</p>
-                        <i class="fa-solid fa-chevron-down text-white"></i>
+                <nav class="flex items-center hidden md:flex z-10">
+                    <a href="#" class=" lg:mr-3 text-dark lg:text-white hover:text-green-200 hover:border-green-200 border border-dark lg:border-white rounded-3xl px-3 py-1.5 flex-row items-center font-medium">About Us</a>
+                    <a href="#" class=" lg:mr-3 text-dark lg:text-white hover:text-green-200 hover:border-green-200 border border-dark lg:border-white rounded-3xl px-3 py-1.5 flex-row items-center font-medium">Article</a>
+                    <a href="#" class="block  lg:mr-3 dropdown text-dark lg:text-white relative hover:text-green-200 hover:border-green-200 border border-dark lg:border-white rounded-3xl px-3 py-1.5 flex items-center font-medium space-x-2" style="position: relative;">
+                        <p class="text-dark lg:text-white">Property</p>
+                        <i class="fa-solid fa-chevron-down text-dark lg:text-white"></i>
                         <!-- Modal -->
                         <!-- <div class="dropdown-content absolute z-10 bg-white rounded-lg shadow-lg w-64">
                             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">House</a>
@@ -47,22 +50,35 @@
                             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Apartment</a>
                         </div> -->
                     </a>
-                    <a href="#" class="text-green-800 font-bold py-3 px-4 rounded-3xl ml-16 bg-green-200 ">Sign Up!</a>
+                    <a href="#" class="text-green-800 font-bold py-3 px-4 rounded-3xl ml-4 xl:ml-16 bg-green-200 ">Sign Up!</a>
                 </nav>
+                <!-- buttons and model -->
+                 <div class="relative">
+                     <button class="block md:hidden burger">
+                         <i class="fa-solid fa-bars text-2xl"></i>
+                     </button>
+                     <!-- modal -->
+                    <ul class="absolute hidden bg-white top-10 right-0 md:hidden flex flex-col px-5 py-3 shadow w-28 modal">
+                        <a href="" class="py-1">About Us</a>
+                        <a href="" class="py-1">Article</a>
+                        <a href="" class="py-1">Property</a>
+                    </ul>
+
+                 </div>
             </div>
         </header>
 
         <!-- Hero Section -->
-            <div class="container px-6 py-16" style="max-width: 500px;">
-                <h1 class="hero-text text-4xl font-extrabold mb-1">Find The Place To</h1>
+            <div class="container px-6 py-16 w-full lg:w-1/2 " style="max-width: 500px;">
+                <h1 class="hero-text text-4xl font-extrabold mb-1 animate__animated animate__fadeInDown">Find The Place To</h1>
                 <div class="flex">
-                    <h1 class="hero-text mr-3 font-extrabold">Live</h1>
-                    <h1 class="font-extrabold t-outline">Your Dreams</h1>
+                    <h1 class="hero-text mr-3 font-extrabold animate__animated animate__fadeInDown">Live</h1>
+                    <h1 class="font-extrabold t-outline animate__animated animate__fadeInDown">Your Dreams</h1>
                 </div>
-                <h1 class="hero-text font-extrabold">Easily Here</h1>
-                <p class="mt-4 text-gray-500">Everything you need about finding your place to live will be here, where it will be easier for you</p>
+                <h1 class="hero-text font-extrabold animate__animated animate__fadeInDown">Easily Here</h1>
+                <p class="mt-4 text-gray-500 lg">Everything you need about finding your place to live will be here, where it will be easier for you</p>
                 <div class="mt-6 flex items-center bg-white px-4 py-3 rounded-full  border border-gray-200 ">
-                    <i class="fa-solid fa-location-dot text-2xl" style="color: #F59E0B"></i>
+                    <i class="fa-solid fa-location-dot text-2xl animate__animated animate__bounce" style="color: #F59E0B"></i>
                     <input type="text" placeholder="Search for the location you want" class="flex-1 px-4 py-2 rounded-l">
                     <button class="bg-green-500 px-4 py-3 text-white flex justify-center items-center rounded-full space-x-2">
                         <p class="text-white">Search</p>
@@ -80,15 +96,24 @@
                 </div>
             </div>
         <!-- background -->
-        <img class="w-1/2 absolute right-0 top-0" src="./assets/images/Img.jpg" style="z-index: -1;">
-        </img>
-        
-    </div>
-    
+         <div class="w-full lg:w-1/2 relative lg:absolute right-0 top-0" style="z-index: 1;">
+             <button class="btn1 px-4 py-2 rounded-full bg-gray-200  text-gray-600 hover:bg-green-600 hover:text-white mx-2 absolute" style="z-index: 2 ;top: 50%; transform: translateY(-50%); left: 1rem">&lt;</button>
+             <button class="btn2 px-4 py-2 rounded-full bg-gray-200  text-gray-600 hover:bg-green-600 hover:text-white mx-2 absolute" style="z-index: 2 ;top: 50%; transform: translateY(-50%); right:1rem">&gt;</button>
+             <img class="img1 hidden w-full" src="./assets/images/Img.jpg" style="z-index: -1;">
+             <img class="img2 w-full" src="./assets/images/Img2.jpg" style="z-index: -1;">
+             <!-- buttons -->
+         </div>
 
+    </img>
+    
+    </div>
+
+
+
+    
     <!-- Featured Section -->
-    <div class="container mx-auto py-8 px-20 bg-white">
-        <div class="flex relative justify-between items-center mb-6">
+    <div class="container mx-auto py-8 px-20 mt-20">
+        <div class="flex relative lg:justify-between justify-center  mb-6 flex-wrap space-y-4 ">
             <!-- recommendation -->
              <p class="absolute text-[#F59E0B]" style="top:-20px; left: 0px; color:#F59E0B ">---- Our Recommendation</p>
             <h2 class="text-3xl font-bold text-center t-navy mb-0">Featured House</h2>
@@ -111,12 +136,18 @@
                 <button class="px-4 py-2 rounded-full bg-green-500 text-white mx-2">&gt;</button>
             </div>
         </div>
-        <div class="flex space-x-4">
-            <div class=" rounded-lg p-4 w-1/3">
+        <div class="flex flex-wrap justify-center">
+            <div class=" rounded-lg p-4 w-1/2 lg:w-1/3 feature-card">
                 <div class="relative mb-4">
-                    <img src="./assets/images/Rectangle 15.jpg" alt="Roselands House" class="rounded-t-lg">
+                    <div class="relative flex mr-24 overflow-hidden rounded-2xl cardhover">
+                        <img src="./assets/images/Rectangle 15.jpg" alt="Roselands House" class="feature-img w-full">
+                        <div class="bg-dark absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center cardinfo">
+                            <p class="font-semibold text-white">Roselands House</p>
+                        </div>
+                    </div>
                     <span class="inline-block bg-red-100 text-red-600 px-2 py-1 rounded-full mb-2 absolute bottom-1 left-1">
-                        <i class="fa-solid fa-fire mr-1 text-red-600"></i>Popular</span>
+                    <i class="fa-solid fa-fire mr-1 text-red-600"></i>Popular</span>
+
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Roselands House</h3>
                 <p class="text-gray-500 mb-2">$35,000,000</p>
@@ -128,9 +159,14 @@
                     </div>
                 </div>
             </div>
-            <div class=" rounded-lg p-4 w-1/3">
+            <div class=" rounded-lg p-4 w-1/2 lg:w-1/3 feature-card">
                 <div class="relative mb-4">
-                    <img src="./assets/images/Rectangle 15-1.jpg" alt="Woodlandside" class="rounded-t-lg">
+                    <div class="relative flex mr-24 overflow-hidden rounded-2xl cardhover ">
+                        <img src="./assets/images/Rectangle 15-1.jpg" alt="Roselands House" class="feature-img w-full">
+                        <div class="bg-dark absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center cardinfo">
+                            <p class="font-semibold text-white">Woodlandside</p>
+                        </div>
+                    </div>
                     <span class="inline-block bg-blue-100 text-blue-600 px-2 py-1 rounded-full mb-2 absolute bottom-1 left-1">
                         <i class="fa-solid fa-house text-blue-600 mr-1"></i>
                         New House
@@ -146,9 +182,14 @@
                     </div>
                 </div>
             </div>
-            <div class=" rounded-lg p-4 w-1/3">
+            <div class=" rounded-lg p-4 w-1/2 lg:w-1/3 feature-card">
                 <div class="relative mb-4">
-                    <img src="./assets/images/Rectangle 15-2.jpg" alt="Roselands House" class="rounded-t-lg">
+                    <div class="relative flex mr-24 overflow-hidden rounded-2xl cardhover ">
+                        <img src="./assets/images/Rectangle 15-2.jpg" alt="Roselands House" class="feature-img w-full">
+                        <div class="bg-dark absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center cardinfo">
+                            <p class="font-semibold text-white">The Old Lighthouse</p>
+                        </div>
+                    </div>
                     <span class="inline-block bg-green-100 text-green-600 px-2 py-1 rounded-full mb-2 absolute left-1 bottom-1">
                         <i class="fa-solid fa-wallet text-green-600 mr-1"></i>Best Deals</span>
                 </div>
@@ -168,92 +209,271 @@
 
 
 
-
     <!-- Tour Section -->
-    <section class="bg-gray-100 py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Let’s Tour And See Our House!</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold">Ready To Sell</h3>
-                    <p>Houses recommended by our partners have been curated to become the home of your dreams!</p>
-                    <ul class="space-y-2">
-                        <li>4 Bedrooms</li>
-                        <li>2 Bathrooms</li>
-                        <li>1 Carport</li>
-                        <li>2 Floors</li>
-                    </ul>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded">Contact Now</button>
+    <div class="container mx-auto py-16 px-20 flex flex-wrap items-center tour-section relative justify-center space-y-4" >
+        <div class="w-full lg:w-1/2 p-4 relative lg:block flex flex-col items-center">
+            <p class="absolute text-[#F59E0B]" style="top:-20px; left: 0px; color:#F59E0B ">---- Ready to Sell!</p>
+            <h2 class="text-3xl font-bold t-navy mb-6">Let's Tour And See Our House!</h2>
+            <p class="text-gray-500 mb-6 w-2/3">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+            <div class="mb-6">
+                <h4 class="font-semibold text-gray-600 mb-2">House Detail</h4>
+                <ul class="space-y-2 flex flex-wrap wrap w-4/5 mt-3 pb-3 cate-list">
+                    <li class="flex items-center w-1/2">
+                        <i class="fas fa-bed w-5 h-5 text-gray-500 mr-2"></i>
+                        <span class="text-gray-500 font-semibold">4 Bedrooms</span>
+                    </li>
+                    <li class="flex items-center w-1/2">
+                        <i class="fas fa-bath w-5 h-5 text-gray-500 mr-2"></i>
+                        <span class="text-gray-500 font-semibold">2 Bathrooms</span>
+                    </li>
+                    <li class="flex items-center w-1/2">
+                        <i class="fas fa-car w-5 h-5 text-gray-500 mr-2"></i>
+                        <span class="text-gray-500 font-semibold">1 Carport</span>
+                    </li>
+                    <li class="flex items-center w-1/2">
+                        <i class="fas fa-layer-group w-5 h-5 text-gray-500 mr-2"></i>
+                        <span class="text-gray-500 font-semibold">2 Floors</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center mt-4 w-2/3">
+                <img src="assets/images/Ellipse 6.jpg" alt="Dianne Russell" class="w-12 h-12 bg-center rounded-full mr-4">
+                <div>
+                    <p class="font-semibold text-gray-800">Dianne Russell</p>
+                    <p class="text-gray-400">Manager Director</p>
                 </div>
-                <img src="path/to/image4.jpg" alt="House Tour" class="w-full h-64 object-cover rounded-lg">
+                <button class="ml-auto bg-green-500 text-white px-4 py-2 rounded-full hover:opacity-50">Contact Now</button>
             </div>
         </div>
-    </section>
-
-
-
-
+        <div class="w-full lg:w-1/2 flex justify-end">
+            <div class="w-4/5 relative mr-8">
+                <div class="">
+                    <img src="./assets/images/Rectangle 17.jpg" alt="House Image" class="rounded-lg mb-4 w-full">
+                    <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-16 h-16 rounded-full hover:opacity-50 origin-top" style="background-color: rgba(0,0,0,.5); ">
+                        <span class="animate-ping absolute h-full w-full rounded-full bg-gray-400 opacity-50 top-0 left-0"></span>
+                        <i class="fa-solid fa-play text-white"></i>
+                    </button>
+                </div>
+                <div class="absolute flex items-end" style="left: -2rem; bottom: -2rem;">
+                    <img src="./assets/images/Rectangle 18.jpg" alt="House Interior 1" class="rounded-lg px-1 w-1/2 scalable">
+                    <img  src="./assets/images/Rectangle 19.jpg" alt="House Interior 2" class="rounded-lg px-1 w-1/4 scalable">
+                    <img  src="./assets/images/Rectangle 20.jpg" alt="House Interior 3" class="rounded-lg px-1 w-1/4 scalable">
+                </div>
+            </div>
+        </div>
+        <!-- Background objects -->
+         <!-- background -->
     
+    </div>
+
+
+
+
+
     <!-- Articles Section -->
-    <section class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Find Out More About Selling And Buying Homes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Article 1 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="path/to/article1.jpg" alt="Article 1" class="w-full h-32 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">The Things We Need To Check When We Want To Buy A House</h3>
-                    <p class="text-gray-600 mt-2">Dianne Russell</p>
-                    <p class="text-gray-500 text-sm">4 min read | 25 Apr 2021</p>
+     <div class="container mx-auto py-8 px-24 mt-6 artical-section relative">
+        <div class="text-center mb-8 flex flex-col items-center">
+            <p class="text-[#F59E0B] text-center" style="color:#F59E0B ">See Tips And Trick From Out Partnership</p>
+            <div class="w-32 h-0.5 mt-3 bg-yellow-600 "></div>
+            <!-- <h3 class="text-yellow-600 font-bold">See Tips And Trick From Our Partnership</h3> -->
+            <h2 class="text-3xl font-bold text-center t-navy my-3">Find Out More About Selling And Buying Homes</h2>
+            <button class="bg-green-500 text-white font-semibold mt-3 px-4 py-2 rounded-full">More Artikel</button>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-4 my-auto">
+                <div class="flex mb-6 space-x-2 feature-card  ">
+                    <img src="./assets/images/Rectangle 22.jpg" alt="Dianne Russell" class="w-40 cover rounded-lg mr-4">
+                    <div>
+                        <div class="flex space-x-1 items-center">
+                            <img src="./assets/images/Ellipse 6.jpg" alt="Dianne Russell" class="w-8 h-8 rounded-full mr-2">
+                            <p class="font-medium text-sm">Dianne Russell</p>
+                        </div>
+                        <p class="t-navy w-full lg:w-3/4 my-2 font-semibold ">The Things We Need To Check When We Want To Buy A House</p>
+                        <p class="text-gray-400 text-sm"><i class="fas fa-clock mr-1"></i> 4 min read | 25 Apr 2021</p>
+                    </div>
+                </div>
+                <div class="flex mb-6 space-x-2 feature-card ">
+                    <img src="./assets/images/Rectangle 22-1.jpg" alt="Courtney Henry" class="w-40 cover rounded-lg mr-4">
+                    <div>
+                        <div class="flex space-x-1 items-center">
+                            <img src="./assets/images/Ellipse 6-1.jpg" alt="Courtney Henry" class="w-8 h-8 rounded-full mr-2">
+                            <p class="font-medium text-sm">Courtney Henry</p>
+                        </div>
+                        <p class="t-navy w-full lg:w-3/4 my-2 font-semibold ">7 Ways To Distinguish The Quality Of The House We Want To Buy</p>
+                        <p class="text-gray-400 text-sm"><i class="fas fa-clock mr-1"></i> 6 min read | 24 Apr 2021</p>
+                    </div>
+                </div>
+                <div class="flex mb-6 space-x-2 feature-card">
+                    <img src="./assets/images/Rectangle 22-2.jpg" alt="Darlene Robertson" class="w-40 cover rounded-lg mr-4">
+                    <div>
+                        <div class="flex space-x-1 items-center">
+                            <img src="./assets/images/Ellipse 6-2.jpg" alt="Darlene Robertson" class="w-8 h-8 rounded-full mr-2">
+                            <p class="font-medium text-sm">Darlene Robertson</p>
+                        </div>
+                        <p class="t-navy w-full lg:w-3/4 my-2 font-semibold ">The Best Way To Know The Quality Of The House We Want To Buy</p>
+                        <p class="text-gray-400 text-sm"><i class="fas fa-clock mr-1"></i> 2 min read | 24 Apr 2021</p>
+                    </div>
                 </div>
             </div>
-            <!-- Article 2 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="path/to/article2.jpg" alt="Article 2" class="w-full h-32 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">7 Ways To Distinguish The Quality Of The House We Want To Buy</h3>
-                    <p class="text-gray-600 mt-2">Courtney Henry</p>
-                    <p class="text-gray-500 text-sm">6 min read | 24 Apr 2021</p>
-                </div>
-            </div>
-            <!-- Article 3 -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="path/to/article3.jpg" alt="Article 3" class="w-full h-32 object-cover">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold">12 Things To Know Before Buying A House</h3>
-                    <p class="text-gray-600 mt-2">Cameron Williamson</p>
-                    <p class="text-gray-500 text-sm">8 min read | 25 Apr 2021</p>
+            <div class="w-full lg:w-1/2 p-4">
+                <div class="feature-card">
+                    <div class="">
+                        <img src="./assets/images/Rectangle 23.jpg" alt="House Image" class="rounded-lg mb-4">
+                    </div>
+                    <div class=" ml-4">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./assets/images/Ellipse 6-2.jpg" alt="Darlene Robertson" class="w-8 h-8 rounded-full mr-2">
+                            <p class="font-medium text-sm">Darlene Robertson</p>
+                        </div>
+                        <h3 class="text-xl font-bold mt-2 mb-2 t-navy">12 Things To Know Before Buying A House</h3>
+                        <p class="text-gray-600 mb-4 text-sm text-gray-500 w-full lg:w-3/4">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                        <p class="text-gray-400 text-sm"><i class="fas fa-clock"></i> 8 min read | 25 Apr 2021</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+
+
+
 
     <!-- Subscribe Section -->
-    <section class="bg-gradient-to-r from-blue-500 to-purple-500 py-16">
-        <div class="container mx-auto px-6 text-center text-white">
-            <h2 class="text-3xl font-bold mb-4">Subscribe For More Info And Update From Hounter</h2>
-            <div class="mt-6 flex justify-center">
-                <input type="email" placeholder="Your email here" class="px-4 py-2 rounded-l">
-                <button class="bg-green-500 px-4 py-2 rounded-r">
-                    Subscribe Now
-                </button>
+    <section class="container mx-auto py-28 px-0 lg:px-28 mt-6 relative" >
+        <div class="rounded-2xl p-8 flex flex-col justify-center items-center relative" style="background: url(./assets/images/Rectangle\ 24.png); background-size: cover; background-position: center;">
+            <img src="./assets/images/Ellipse 6-1.jpg" alt="Avatar 1" class="hidden bubble1 md:block w-12 h-12 rounded-full border-2 border-white absolute top-10 left-10">
+            <img src="./assets/images/Rectangle 15-1.jpg" alt="Avatar 2" class="hidden bubble3 md:block w-14 h-14 rounded-2xl border-2 border-white absolute bottom-10 left-10">
+            <img src="./assets/images/Ellipse 6.jpg" alt="Avatar 3" class="hidden bubble2 md:block w-10 h-10 rounded-full border-2 border-white absolute top-14 left-40">
+            <img src="./assets/images/Rectangle 15.jpg" alt="Avatar 4" class="hidden bubble2 md:block w-12 h-12 rounded-full border-2 border-white absolute bottom-8 left-28 ">
+            <img src="./assets/images/Ellipse 6-2.jpg" alt="Avatar 5" class="hidden bubble1 md:block w-12 h-12 rounded-full border-2 border-white absolute top-10 right-10">
+            <img src="./assets/images/Rectangle 15-2.jpg" alt="Avatar 6" class="hidden bubble3 md:block w-12 h-12 rounded-full border-2 border-white absolute bottom-10 right-10">
+            <img src="./assets/images/Rectangle 17.jpg" alt="Avatar 7" class="hidden bubble1 md:block w-14 h-14 rounded-2xl border-2 border-white absolute top-16 right-40">
+
+            <h2 class="text-3xl font-semibold t-navy mb-6 w-full md:w-1/2 lg:w-1/3 text-center">Subscribe For More Info And Update From Hounter</h2>
+            <div class="flex items-center justify-center bg-white rounded-full px-4 py-2 space-x-2 " >
+                <i class="fa-solid fa-envelope-circle-check" style="color: #3B82F6"></i>
+                <input type="email" placeholder="Your email here" class="px-4 py-2 flex-1 rounded-l-full">
+                <button class="bg-green-500 text-white px-6 py-2 rounded-full">Subscribe Now</button>
             </div>
         </div>
     </section>
 
+
     <!-- Footer -->
-    <footer class="bg-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="text-gray-900 text-2xl font-bold mb-4">Hounter</div>
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="#" class="text-gray-600 hover:text-gray-900">Facebook</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">Twitter</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">Instagram</a>
+    <footer class="px-28 py-16 footer relative">
+        <div class="container mx-auto flex flex-wrap justify-between items-start space-y-4 ">
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div class="flex items-center mb-4">
+                    <div class="text-2xl font-bold text-gray-900 flex space-x-2 items-center mr-auto">
+                        <img src="./assets/images/logo.jpg" alt="">
+                        <a href="#" class=" font-bold t-navy ms-0 text-base">Hounter</a>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 w-1/2 text-center lg:text-left">We provide information about properties such as houses, villas, and apartments to help people find their dream home.</p>
+                <div class="flex space-x-4 mb-6 lg:mb-0">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
-            <p class="text-gray-600">&copy; 2024 Hounter. All rights reserved.</p>
+            <div class="w-full lg:w-1/2 flex justify-between flex flex-wrap">
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Property</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-700">House</a></li>
+                        <li><a href="#" class="hover:text-gray-700">Apartment</a></li>
+                        <li><a href="#" class="hover:text-gray-700">Villa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Article</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-700">New Article</a></li>
+                        <li><a href="#" class="hover:text-gray-700">Popular Article</a></li>
+                        <li><a href="#" class="hover:text-gray-700">Most Read</a></li>
+                        <li><a href="#" class="hover:text-gray-700">Tips & Tricks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>2464 Royal Ln. Mesa, New Jersey 45463</li>
+                        <li>(671) 555-0110</li>
+                        <li>info@hounter.com</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+    <script>
+        const burger = document.querySelector(".burger");
 
+        burger.addEventListener("click", () => {
+            const modal = document.querySelector(".modal");
+            modal.classList.toggle("hidden");
+        });
+
+        const img1 = document.querySelector(".img1");
+        const img2 = document.querySelector(".img2");
+
+        // window.addEventListener("scroll", () => {
+        //     img1.style.transform = `translateY(${window.scrollY * 0.5}px)`;
+        //     img2.style.transform = `translateY(${window.scrollY * 0.5}px)`;
+        // });
+        let id = setInterval(() => {
+            img1.classList.toggle("hidden");
+            img2.classList.toggle("hidden");
+        }, 5000);
+
+        const btn1 = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+        btn1.addEventListener("click", () => {
+            // clearInterval(id);
+            // let id = setInterval(() => {
+            //     img1.classList.toggle("hidden");
+            //     img2.classList.toggle("hidden");
+            // }, 5000);
+            img1.classList.toggle("hidden");
+            img2.classList.toggle("hidden");
+        });
+        btn2.addEventListener("click", () => {
+            // clearInterval(id);
+            // let id = setInterval(() => {
+            // img1.classList.toggle("hidden");
+            // img2.classList.toggle("hidden");
+            // }, 5000);
+            img1.classList.toggle("hidden");
+            img2.classList.toggle("hidden");
+        });
+        
+        // animation
+
+        // scripts.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const scalableElements = document.querySelectorAll('.feature-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    } else {
+                        entry.target.classList.remove('in-view');
+                    }
+                }, {threshold: 0.5});
+            });
+
+            scalableElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
+
 </html>
 

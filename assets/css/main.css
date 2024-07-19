@@ -7,7 +7,11 @@
 .t-green{
     color: #4BE4C9;
 }
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 
 .b-green{ 
@@ -57,3 +61,228 @@
     font-size: 2.5rem;
 }
 
+
+
+.cate-list::after{
+    content: "";
+    width: 80%;
+    height: 1px;
+    background-color: gray;
+    opacity: .3;
+    margin-top: 2rem;
+}
+
+
+.tour-section::after{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #F59E0B;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 0;
+    right: 0;
+    transform: translate(30%, 30%);
+}
+
+
+.artical-section::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #4BE4C9;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 0;
+    left: 0;
+    transform: translate(-50%,10%);
+
+}
+.artical-section::after{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #C8FF82;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,10%);
+
+}
+
+
+.footer::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #C8FF82;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%,-30%);
+
+}
+
+.footer::after{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-color: #4BE4C9;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    bottom: 0;
+    right: 0;
+    transform: translate(30%,30%);
+
+}
+
+.img1,.img2{
+    animation: fadeIn .8s ease-in-out;
+
+}
+
+.feature-img{
+
+}
+
+.cardhover{
+
+}
+
+.cardinfo{
+    transform-origin: bottom center;   
+    transform: scale(1,0);
+    opacity: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+
+.cardhover:hover .cardinfo{
+    opacity: 1;
+    transform: scale(1,1);
+    animation: slideIn .4s ease-in-out;
+
+}
+
+
+.scalable {
+    /* display: inline-block; */
+    /* padding: 20px; */
+    /* background-color: lightblue; */
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.scalable:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: .7;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: scale(1,0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+
+.animate {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate.in-view {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+@keyframes slideInZoom {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.feature-card {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition-delay: .3s;
+}
+
+.feature-card.in-view {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+@keyframes slideInZoom1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.bubble1 {
+    animation: float 3s ease-in-out infinite;
+}
+.bubble2 {
+    animation: float 2.5s ease-in-out infinite;
+}
+.bubble3 {
+    animation: float 3.2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
